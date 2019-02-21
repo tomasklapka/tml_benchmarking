@@ -21,6 +21,12 @@ int main(int argc, char** argv) {
 			cout << "e(x, y) :- e(x, z), e(z, y)." << endl;
 			return 0;
 		}
+		if (strcmp(argv[1], "souffle.facts") == 0) {
+			for (size_t k = 1; k < n; ++k)
+				cout << k << "\t" << k+1 << endl;
+			cout << n << "\t" << 1 << endl;
+			return 0;
+		}
 		if (strcmp(argv[1], "xsb") == 0) {
 			cout << ":- table e/2." << endl;
 			for (size_t k = 1; k < n; ++k)
@@ -31,6 +37,6 @@ int main(int argc, char** argv) {
 			return 0;
 		}
 	}
-	cout << "usage: tcgen <tml|souffle|xsb> <# of vertices>" << endl;
+	cout << "usage: tcgen <tml|souffle|souffle.facts|xsb> <# of vertices>" << endl;
 	return 0;
 }

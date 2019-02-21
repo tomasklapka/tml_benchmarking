@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# compile tcgen - generator of testing graphs
-if [ ! -f ./tcgen ]; then g++ tcgen.cpp -W -Wall -Wpedantic -otcgen -O3 -flto; fi
-
 declare -a ts               # elapsed times in seconds
 declare -a ms               # array of mems taken
 declare -A r_a              # benchmark result
@@ -13,6 +10,16 @@ declare -i estimate_time=0  # estimate time of next round
 declare -i estimate_mem=0   # estimate mem of next round
 declare k_time=4            # estimation koef.
 declare k_mem=4             # estimation koef.
+
+# compile tcgen - generator of testing graphs
+if [ ! -f ./tcgen ]; then g++ tcgen.cpp -W -Wall -Wpedantic -otcgen -O3 -flto; fi
+
+# souffle PE compile TC prog (TC prog w/o data compiled to c++)
+#started=`date +%s%3N`
+#souffle -otc.souffle tc.souffle
+#finished=`date +%s%3N`
+#let "souffle_tc_compile_time=finished - started"
+#rm tc.souffle.cpp
 
 # set max_time from $1 (number of seconds) or use 300 s (5 minutes) as default
 if [ -z $1 ]; then max_time=300000; else max_time="${1}000"; fi
@@ -61,7 +68,7 @@ test_round() {
     echo "([test]=$test [nodes]=$n [elapsed]=$elapsed $r [k_time]=$k_time [k_mem]=$k_mem [est_time]=$estimate_time [est_mem]=$estimate_mem)"
 }
 
-for test in tml souffle xsb; do
+for test in souffle_compiled_prog tml souffle xsb; do
     echo "Starting TC test of $test"
     n=125      # start with 125 nodes
     ts=()      # empty elapsed times

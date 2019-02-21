@@ -1,0 +1,4 @@
+.decl e(n:number, m:number)
+.input e
+.output e
+e(x, y) :- e(x, z), e(z, y).
