@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ./tcgen tml $1 > ./tmp/$1.tml
 ./benchmark.sh tml < ./tmp/$1.tml > ./tmp/$1.result.tml

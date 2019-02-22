@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 ./tcgen souffle.facts $1 > ./tmp/e.facts
 ./benchmark.sh ./test_tc_souffle_compiled_prog_round.sh $1
