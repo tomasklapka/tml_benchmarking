@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# list of tests to run
+declare -a tests=(tml xsb souffle souffle_compiled_prog souffle_compiled)
 declare -a ts               # elapsed times in seconds
 declare -a ms               # array of mems taken
 declare -A r_a              # benchmark result
@@ -67,7 +69,7 @@ function test_round() {
     echo "([test]=$test [nodes]=$n [elapsed]=$elapsed $r [k_time]=$k_time_print [k_mem]=$k_mem_print [est_time]=$estimate_time [est_mem]=$estimate_mem)"
 }
 
-for test in tml xsb souffle souffle_compiled_prog souffle_compiled; do
+for test in ${tests[*]}; do
     echo "Starting TC test of $test"
     n=125      # start with 125 nodes
     ts=()      # empty elapsed times
