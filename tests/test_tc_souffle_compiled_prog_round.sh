@@ -1,4 +1,4 @@
 #!/bin/sh
 
-souffle -otc.souffle.compiled tc.souffle
-./tc.souffle.compiled -F. -D.
+souffle -o./tmp/tc.souffle.compiled tc.souffle
+./tmp/tc.souffle.compiled -F./tmp/ -D./tmp/

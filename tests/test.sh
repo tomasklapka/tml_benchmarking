@@ -32,19 +32,15 @@ echo "Limit test round time: $max_time ms, max mem taken: $max_mem kBs and max n
 echo
 
 function test_round() {
-    echo -n "TC $n nodes - $test: "
+    # show status starting time and estimates
+    status_show="running TC $n nodes - $test - started at: $(date +%H:%M:%S). estimate time: ${estimate_time} ms mem: ${estimate_mem} kBs"
+    echo -n $status_show
+    status_hide=`echo $status_show | sed -r 's/./\\\\b/g'` # prepare deletion string
 
-    # show starting time and estimates
-    estimate_show="Started at: $(date +%H:%M:%S). Estimate time: ${estimate_time} ms mem: ${estimate_mem} kBs"
-    echo -n $estimate_show
-    estimate_hide=`echo $estimate_show | sed -r 's/./\\\\b/g'` # prepare deletion string
-
-    # run the test, measure elapsed time and store values
-    started=`date +%s%3N`
+    # run the test and store result values
     r=`./test_tc_$test.sh $n 2>&1 >/dev/null`
-    finished=`date +%s%3N`
-    let "elapsed=finished - started"
     eval "r_a=($r)"
+    elapsed=${r_a[elapsed]}
     ts+=($elapsed)
     ms+=(${r_a[mem]})
 
@@ -62,13 +58,14 @@ function test_round() {
     estimate_time=$(printf %.$2f $(echo "${ts[-1]} * $k_time" | bc -l))
     estimate_mem=$(printf %.$2f $(echo "${ms[-1]} * $k_mem" | bc -l))
 
-    # remove starting time with estimates and show values
-    echo -ne $estimate_hide
-    k_time_print=$(printf '%.*f\n' 2 $k_time)
-    k_mem_print=$(printf '%.*f\n' 2 $k_mem)
-    echo "([test]=$test [nodes]=$n [elapsed]=$elapsed $r [k_time]=$k_time_print [k_mem]=$k_mem_print [est_time]=$estimate_time [est_mem]=$estimate_mem)"
+    # replace status with resulting values
+    echo -ne $status_hide
+    k_time_print=$(printf '%.*f\n' 2 $k_time) # round k_time for printing
+    k_mem_print=$(printf '%.*f\n' 2 $k_mem)   # round k_mem for printing
+    echo "([test]=$test [nodes]=$n $r [k_time]=$k_time_print [k_mem]=$k_mem_print [est_time]=$estimate_time [est_mem]=$estimate_mem)"
 }
 
+mkdir -p ./tmp # create tmp dir if does not exists
 for test in ${tests[*]}; do
     echo "Starting TC test of $test"
     n=125      # start with 125 nodes
@@ -84,7 +81,7 @@ for test in ${tests[*]}; do
         n=n*2  # double number of nodes
     done
     # inform about the end of test and show what limit was reached
-    echo -n "TC test of $test finished (limit reached) "
+    echo -n "TC test of $test finished because "
     declare -a limits=();
     if (( estimate_time > max_time )); then limits+=(" ${estimate_time} ms > ${max_time} ms"); fi
     if (( estimate_mem > max_mem )); then limits+=(" ${estimate_mem} kBs > ${max_mem} kBs"); fi

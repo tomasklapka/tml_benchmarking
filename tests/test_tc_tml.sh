@@ -1,5 +1,5 @@
 #!/bin/sh
 
-./tcgen tml $1 > $1.tml
-./benchmark.sh tml < $1.tml > $1.result.tml
-rm $1.tml $1.result.tml
+./tcgen tml $1 > ./tmp/$1.tml
+./benchmark.sh tml < ./tmp/$1.tml > ./tmp/$1.result.tml
+rm ./tmp/$1.tml ./tmp/$1.result.tml
