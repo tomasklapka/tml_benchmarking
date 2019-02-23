@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
 				cout << "e(" << k << "," << k+1 << ")." << endl;
 			cout << "e(" << n << ",1)." << endl;
 			cout << "e(X,Y) :- e(X,Z), e(Z,Y)." << endl;
-			cout << ":- findall([X|Y], e(X,Y), TC), write(TC), halt." << endl;
+			cout << ":- Q = e(_,_), findall(Q, Q, TC), write(TC), halt." << endl;
 			return 0;
 		}
 	}
