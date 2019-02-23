@@ -1,7 +1,12 @@
 #!/bin/bash
 
-# list of tests to run
-declare -a tests=(tml xsb souffle souffle_compiled_prog souffle_compiled)
+# list of tests to run (can be set in TESTS environment variable)
+declare -a tests
+if [ -z $TESTS ]; then
+    tests=(tml xsb souffle souffle_compiled_prog souffle_compiled);
+else
+    tests=($TESTS);
+fi
 declare -a ts               # elapsed times in seconds
 declare -a ms               # array of mems taken
 declare -A r_a              # benchmark result
