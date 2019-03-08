@@ -26,12 +26,13 @@ Running TC tests for tml, souffle and xsb.
 Limit test round time: 300000 ms, max mem taken: 16696168 kBs and max number of nodes: 8000
 
 Starting TC test of tml
-([test]=tml [nodes]=125 [elapsed]=337 [user]=0.31 [system]=0.00 [cpu]=99% [mem]=12228 [k_time]=4.00 [k_mem]=4.00 [est_time]=1348 [est_mem]=48912)
-([test]=tml [nodes]=250 [elapsed]=1254 [user]=1.14 [system]=0.03 [cpu]=99% [mem]=31964 [k_time]=3.72 [k_mem]=2.61 [est_time]=4666 [est_mem]=83554)
-([test]=tml [nodes]=500 [elapsed]=5295 [user]=4.90 [system]=0.11 [cpu]=99% [mem]=108444 [k_time]=4.22 [k_mem]=3.39 [est_time]=22358 [est_mem]=367917)
-([test]=tml [nodes]=1000 [elapsed]=22427 [user]=20.68 [system]=0.62 [cpu]=99% [mem]=404024 [k_time]=4.24 [k_mem]=3.73 [est_time]=94990 [est_mem]=1505251)
-([test]=tml [nodes]=2000 [elapsed]=101233 [user]=93.68 [system]=2.33 [cpu]=99% [mem]=1566820 [k_time]=4.51 [k_mem]=3.88 [est_time]=456955 [est_mem]=6076186)
-TC test of tml finished because 456955 ms > 300000 ms.
+([test]=tml [nodes]=125 [elapsed]=93 [user]=0.06 [system]=0.00 [cpu]=98% [mem]=12048 [k_time]=4.00 [k_mem]=4.00 [est_time]=372 [est_mem]=48192)
+([test]=tml [nodes]=250 [elapsed]=325 [user]=0.20 [system]=0.04 [cpu]=99% [mem]=31868 [k_time]=3.49 [k_mem]=2.65 [est_time]=1136 [est_mem]=84294)
+([test]=tml [nodes]=500 [elapsed]=1393 [user]=0.99 [system]=0.12 [cpu]=99% [mem]=108420 [k_time]=4.29 [k_mem]=3.40 [est_time]=5971 [est_mem]=368862)
+([test]=tml [nodes]=1000 [elapsed]=6160 [user]=4.42 [system]=0.60 [cpu]=99% [mem]=403720 [k_time]=4.42 [k_mem]=3.72 [est_time]=27240 [est_mem]=1503319)
+([test]=tml [nodes]=2000 [elapsed]=29521 [user]=21.79 [system]=2.50 [cpu]=99% [mem]=1566672 [k_time]=4.79 [k_mem]=3.88 [est_time]=141476 [est_mem]=6079612)
+([test]=tml [nodes]=4000 [elapsed]=162523 [user]=130.41 [system]=9.64 [cpu]=99% [mem]=5915416 [k_time]=5.51 [k_mem]=3.78 [est_time]=894744 [est_mem]=22335337)
+TC test of tml finished because 894744 ms > 300000 ms, 22335337 kBs > 16696168 kBs.
 
 Starting TC test of xsb
 ([test]=xsb [nodes]=125 [elapsed]=300 [user]=0.27 [system]=0.02 [cpu]=101% [mem]=20540 [k_time]=4.00 [k_mem]=4.00 [est_time]=1200 [est_mem]=82160)
@@ -77,11 +78,12 @@ Running TC tests for tml, souffle and xsb.
 Limit test round time: 60000 ms, max mem taken: 16696168 kBs and max number of nodes: 8000
 
 Starting TC test of tml
-([test]=tml [nodes]=125 [elapsed]=379 [user]=0.35 [system]=0.01 [cpu]=99% [mem]=11564 [k_time]=4.00 [k_mem]=4.00 [est_time]=1516 [est_mem]=46256)
-([test]=tml [nodes]=250 [elapsed]=1413 [user]=1.31 [system]=0.02 [cpu]=99% [mem]=31332 [k_time]=3.73 [k_mem]=2.71 [est_time]=5268 [est_mem]=84892)
-([test]=tml [nodes]=500 [elapsed]=5857 [user]=5.42 [system]=0.16 [cpu]=99% [mem]=107692 [k_time]=4.15 [k_mem]=3.44 [est_time]=24278 [est_mem]=370151)
-([test]=tml [nodes]=1000 [elapsed]=24867 [user]=23.17 [system]=0.63 [cpu]=99% [mem]=403216 [k_time]=4.25 [k_mem]=3.74 [est_time]=105578 [est_mem]=1509705)
-TC test of tml finished because 105578 ms > 60000 ms.
+([test]=tml [nodes]=125 [elapsed]=110 [user]=0.08 [system]=0.00 [cpu]=98% [mem]=11504 [k_time]=4.00 [k_mem]=4.00 [est_time]=440 [est_mem]=46016)
+([test]=tml [nodes]=250 [elapsed]=378 [user]=0.27 [system]=0.03 [cpu]=99% [mem]=31240 [k_time]=3.44 [k_mem]=2.72 [est_time]=1299 [est_mem]=84835)
+([test]=tml [nodes]=500 [elapsed]=1661 [user]=1.24 [system]=0.15 [cpu]=99% [mem]=107636 [k_time]=4.39 [k_mem]=3.45 [est_time]=7299 [est_mem]=370855)
+([test]=tml [nodes]=1000 [elapsed]=7014 [user]=5.26 [system]=0.70 [cpu]=99% [mem]=403144 [k_time]=4.22 [k_mem]=3.75 [est_time]=29618 [est_mem]=1509951)
+([test]=tml [nodes]=2000 [elapsed]=33763 [user]=26.21 [system]=2.64 [cpu]=99% [mem]=1566000 [k_time]=4.81 [k_mem]=3.88 [est_time]=162524 [est_mem]=6083077)
+TC test of tml finished because 162524 ms > 60000 ms.
 
 Starting TC test of xsb
 ([test]=xsb [nodes]=125 [elapsed]=320 [user]=0.30 [system]=0.01 [cpu]=100% [mem]=20536 [k_time]=4.00 [k_mem]=4.00 [est_time]=1280 [est_mem]=82144)

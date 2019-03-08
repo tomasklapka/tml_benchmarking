@@ -13,8 +13,7 @@ RUN apt-get update && apt-get install -yq --no-install-recommends ca-certificate
 RUN git clone "https://github.com/IDNI/tau" /tmp/tau \
  && cd /tmp/tau \
  && git reset --hard $TAU_COMMIT \
- && make \
- && mv ./tml /usr/bin/ \
+ && g++ -std=c++1y tml.cpp driver.cpp bdd.cpp -W -Wall -Wpedantic -o/usr/bin/tml -O3 -flto \
  && rm -rf /tmp/tau
 
 # configure and make XSB
