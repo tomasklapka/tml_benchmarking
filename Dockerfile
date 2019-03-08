@@ -1,6 +1,6 @@
 FROM debian:buster-slim
 
-ENV TAU_COMMIT a0c1834
+ENV TAU_COMMIT 5b304bc9
 ADD souffle_1.5.1-1_amd64.deb /tmp/souffle.deb
 ADD XSB.tar.gz /opt
 
@@ -13,7 +13,8 @@ RUN apt-get update && apt-get install -yq --no-install-recommends ca-certificate
 RUN git clone "https://github.com/IDNI/tau" /tmp/tau \
  && cd /tmp/tau \
  && git reset --hard $TAU_COMMIT \
- && g++-8 -std=c++1y tml.cpp -W -Wall -Wpedantic -o/usr/bin/tml -O3 -flto \
+ && make \
+ && mv ./tml /usr/bin/ \
  && rm -rf /tmp/tau
 
 # configure and make XSB
