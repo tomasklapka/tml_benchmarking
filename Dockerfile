@@ -21,8 +21,7 @@ RUN git clone "https://github.com/tomasklapka/tml.js" /home/tml.js \
  && cd /home/tml.js \
  && npm install \
  && npm run-script build_npm \
- && echo "#!/bin/bash\n\ndeclare -a meminfo=(\$(free --kilo | grep Mem))\ndeclare -i max_mem=\${meminfo[1]}" > /usr/bin/tml.js \
- && echo "max_mem=\$max_mem/1024\nnode --max_old_space_size=\$max_mem /home/tml.js/cli \$@" >> /usr/bin/tml.js \
+ && echo "#!/bin/bash\n\nnode --max_old_space_size=\$MAX_MEM_MB /home/tml.js/cli \$@" >> /usr/bin/tml.js \
  && chmod +x /usr/bin/tml.js
 
 # clone tau repo and compile

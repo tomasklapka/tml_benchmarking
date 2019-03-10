@@ -30,7 +30,8 @@ if [ -z $1 ]; then max_time=300000; else max_time="${1}000"; fi
 
 # get total memory to set max_mem
 meminfo=($(free --kilo | grep Mem));
-max_mem=${meminfo[1]}
+declare -i max_mem=${meminfo[1]}
+declare -i max_mem_mb=$max_mem/1024
 
 # up to 7 rounds (when starting at 125)
 max_nodes=8000
@@ -46,7 +47,7 @@ function test_round() {
     status_hide=`echo $status_show | sed -r 's/./\\\\b/g'` # prepare deletion string
 
     # run the test and store result values
-    r=`./test_tc_$test.sh $n 2>&1 >/dev/null`
+    r=`MAX_MEM_MB=$max_mem_mb ./test_tc_$test.sh $n 2>&1 >/dev/null`
     eval "r_a=($r)"
     elapsed=${r_a[elapsed]}
     ts+=($elapsed)
