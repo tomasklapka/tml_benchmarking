@@ -1,8 +1,11 @@
 #!/bin/bash
 
+# remove old files
+rm -rf ./tmp/* ./xsb*.P ./xsb*.xwam
+
 # list of tests to run (can be set in TESTS environment variable)
 declare -a tests
-if [ -z $TESTS ]; then
+if [ -z "$TESTS" ]; then
     tests=(tml xsb souffle souffle_compiled_prog souffle_compiled);
 else
     tests=($TESTS);
@@ -32,7 +35,7 @@ max_mem=${meminfo[1]}
 # up to 7 rounds (when starting at 125)
 max_nodes=8000
 
-echo "Running TC tests for tml, souffle and xsb."
+echo "Running TC tests: ${tests[*]}"
 echo "Limit test round time: $max_time ms, max mem taken: $max_mem kBs and max number of nodes: $max_nodes"
 echo
 
