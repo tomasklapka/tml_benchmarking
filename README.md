@@ -12,6 +12,7 @@ You can change the list and order of the tests by using `$TESTS` environment var
 Available tests are:
 
 * **tml**
+* **tml.js** - node.js implementation
 * **xsb**
 * **souffle** - interpreted
 * **souffle_compiled_prog** - compiled TC program, data on input

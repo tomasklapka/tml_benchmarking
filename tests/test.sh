@@ -6,7 +6,7 @@ rm -rf ./tmp/* ./xsb*.P ./xsb*.xwam
 # list of tests to run (can be set in TESTS environment variable)
 declare -a tests
 if [ -z "$TESTS" ]; then
-    tests=(tml xsb souffle souffle_compiled_prog souffle_compiled);
+    tests=(tml xsb souffle tml.js souffle_compiled_prog souffle_compiled);
 else
     tests=($TESTS);
 fi
