@@ -6,7 +6,7 @@ rm -rf ./tmp/* ./xsb*.P ./xsb*.xwam
 # list of tests to run (can be set in TESTS environment variable)
 declare -a tests
 if [ -z "$TESTS" ]; then
-    tests=(tml xsb souffle tml.js souffle_compiled_prog souffle_compiled);
+    tests=(tml xsb souffle souffle_compiled_prog souffle_compiled);
 else
     tests=($TESTS);
 fi
@@ -33,10 +33,10 @@ meminfo=($(free --kilo | grep Mem));
 declare -i max_mem=${meminfo[1]}
 declare -i max_mem_mb=$max_mem/1024
 
-# up to 7 rounds (when starting at 125)
-max_nodes=8000
+# up to 6 rounds (when starting at 125)
+max_nodes=4000
 
-echo "Running TC tests: ${tests[*]}"
+echo "Running TC tests: ${tests[*]} alt: $ALT"
 echo "Limit test round time: $max_time ms, max mem taken: $max_mem kBs and max number of nodes: $max_nodes"
 echo
 
@@ -76,7 +76,7 @@ function test_round() {
 
 mkdir -p ./tmp # create tmp dir if does not exists
 for test in ${tests[*]}; do
-    echo "Starting TC test of $test"
+    echo "Starting TC test of $test $ALT"
     n=125      # start with 125 nodes
     ts=()      # empty elapsed times
     ms=()      # empty taken mems
@@ -90,7 +90,7 @@ for test in ${tests[*]}; do
         n=n*2  # double number of nodes
     done
     # inform about the end of test and show what limit was reached
-    echo -n "TC test of $test finished because "
+    echo -n "TC test of $test $ALT finished because "
     declare -a limits=();
     if (( estimate_time > max_time )); then limits+=(" ${estimate_time} ms > ${max_time} ms"); fi
     if (( estimate_mem > max_mem )); then limits+=(" ${estimate_mem} kBs > ${max_mem} kBs"); fi

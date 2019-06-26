@@ -7,4 +7,4 @@ if [ ! -f ./XSB.tar.gz ]; then
     wget http://xsb.sourceforge.net/downloads/XSB.tar.gz;
 fi
 
-docker build --tag tml_benchmarking:latest . && docker run -e "TESTS=$TESTS" -ti --rm -v $(pwd)/tests:/home/tests tml_benchmarking $@
+docker build --tag tml_benchmarking:latest . && docker run -e "TESTS=$TESTS ALTS=$ALTS" -ti --rm -v $(pwd)/tests:/home/tests tml_benchmarking $@

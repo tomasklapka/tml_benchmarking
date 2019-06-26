@@ -1,0 +1,41 @@
+Running TC tests: tml xsb souffle souffle_compiled_prog souffle_compiled alt: .right
+Limit test round time: 60000 ms, max mem taken: 16696094 kBs and max number of nodes: 4000
+
+Starting TC test of tml .right
+([test]=tml [nodes]=125 [elapsed]=57 [user]=0.02 [system]=0.01 [cpu]=97% [mem]=7400 [k_time]=4.00 [k_mem]=4.00 [est_time]=228 [est_mem]=29600)
+([test]=tml [nodes]=250 [elapsed]=191 [user]=0.07 [system]=0.03 [cpu]=99% [mem]=10876 [k_time]=3.35 [k_mem]=1.47 [est_time]=640 [est_mem]=15985)
+([test]=tml [nodes]=500 [elapsed]=713 [user]=0.27 [system]=0.12 [cpu]=99% [mem]=17768 [k_time]=3.73 [k_mem]=1.63 [est_time]=2662 [est_mem]=29027)
+([test]=tml [nodes]=1000 [elapsed]=2857 [user]=1.07 [system]=0.44 [cpu]=99% [mem]=31140 [k_time]=4.01 [k_mem]=1.75 [est_time]=11448 [est_mem]=54576)
+([test]=tml [nodes]=2000 [elapsed]=12026 [user]=4.05 [system]=1.82 [cpu]=99% [mem]=58472 [k_time]=4.21 [k_mem]=1.88 [est_time]=50621 [est_mem]=109794)
+([test]=tml [nodes]=4000 [elapsed]=47437 [user]=15.60 [system]=7.13 [cpu]=99% [mem]=116108 [k_time]=3.94 [k_mem]=1.99 [est_time]=187117 [est_mem]=230556)
+TC test of tml .right finished because 187117 ms > 60000 ms, 8000 nodes > 4000 nodes.
+
+Starting TC test of xsb .right
+([test]=xsb [nodes]=125 [elapsed]=297 [user]=0.27 [system]=0.02 [cpu]=101% [mem]=20440 [k_time]=4.00 [k_mem]=4.00 [est_time]=1188 [est_mem]=81760)
+([test]=xsb [nodes]=250 [elapsed]=1830 [user]=1.80 [system]=0.02 [cpu]=100% [mem]=37952 [k_time]=6.16 [k_mem]=1.86 [est_time]=11276 [est_mem]=70467)
+([test]=xsb [nodes]=500 [elapsed]=14299 [user]=14.22 [system]=0.06 [cpu]=99% [mem]=118952 [k_time]=7.81 [k_mem]=3.13 [est_time]=111728 [est_mem]=372828)
+TC test of xsb .right finished because 111728 ms > 60000 ms.
+
+Starting TC test of souffle .right
+([test]=souffle [nodes]=125 [elapsed]=68 [user]=0.05 [system]=0.00 [cpu]=100% [mem]=8204 [k_time]=4.00 [k_mem]=4.00 [est_time]=272 [est_mem]=32816)
+([test]=souffle [nodes]=250 [elapsed]=223 [user]=0.16 [system]=0.00 [cpu]=100% [mem]=9380 [k_time]=3.28 [k_mem]=1.14 [est_time]=731 [est_mem]=10725)
+([test]=souffle [nodes]=500 [elapsed]=846 [user]=0.64 [system]=0.00 [cpu]=99% [mem]=13568 [k_time]=3.79 [k_mem]=1.45 [est_time]=3209 [est_mem]=19626)
+([test]=souffle [nodes]=1000 [elapsed]=3451 [user]=2.59 [system]=0.01 [cpu]=99% [mem]=27412 [k_time]=4.08 [k_mem]=2.02 [est_time]=14077 [est_mem]=55382)
+([test]=souffle [nodes]=2000 [elapsed]=14761 [user]=10.60 [system]=0.04 [cpu]=99% [mem]=81388 [k_time]=4.28 [k_mem]=2.97 [est_time]=63137 [est_mem]=241646)
+TC test of souffle .right finished because 63137 ms > 60000 ms.
+
+Starting TC test of souffle_compiled_prog .right
+([test]=souffle_compiled_prog [nodes]=125 [elapsed]=6313 [comp_elapsed]=6296 [comp_mem]=407664 [user]=6.07 [system]=0.21 [cpu]=99% [mem]=407664 [k_time]=4.00 [k_mem]=4.00 [est_time]=25252 [est_mem]=1630656)
+([test]=souffle_compiled_prog [nodes]=250 [elapsed]=6320 [comp_elapsed]=6284 [comp_mem]=407692 [user]=6.08 [system]=0.21 [cpu]=99% [mem]=407692 [k_time]=1.00 [k_mem]=1.00 [est_time]=6327 [est_mem]=407720)
+([test]=souffle_compiled_prog [nodes]=500 [elapsed]=6425 [comp_elapsed]=6301 [comp_mem]=407660 [user]=6.21 [system]=0.18 [cpu]=99% [mem]=407660 [k_time]=1.02 [k_mem]=1.00 [est_time]=6532 [est_mem]=407628)
+([test]=souffle_compiled_prog [nodes]=1000 [elapsed]=6847 [comp_elapsed]=6389 [comp_mem]=407492 [user]=6.65 [system]=0.17 [cpu]=99% [mem]=407492 [k_time]=1.07 [k_mem]=1.00 [est_time]=7297 [est_mem]=407324)
+([test]=souffle_compiled_prog [nodes]=2000 [elapsed]=8250 [comp_elapsed]=6304 [comp_mem]=407544 [user]=8.01 [system]=0.21 [cpu]=99% [mem]=407544 [k_time]=1.20 [k_mem]=1.00 [est_time]=9940 [est_mem]=407596)
+([test]=souffle_compiled_prog [nodes]=4000 [elapsed]=14606 [comp_elapsed]=6373 [comp_mem]=407688 [user]=14.27 [system]=0.30 [cpu]=99% [mem]=407688 [k_time]=1.77 [k_mem]=1.00 [est_time]=25859 [est_mem]=407832)
+TC test of souffle_compiled_prog .right finished because 8000 nodes > 4000 nodes.
+
+Starting TC test of souffle_compiled .right
+([test]=souffle_compiled [nodes]=125 [elapsed]=6423 [comp_elapsed]=6324 [comp_mem]=406860 [user]=6.22 [system]=0.18 [cpu]=99% [mem]=406860 [k_time]=4.00 [k_mem]=4.00 [est_time]=25692 [est_mem]=1627440)
+([test]=souffle_compiled [nodes]=250 [elapsed]=7133 [comp_elapsed]=6504 [comp_mem]=413472 [user]=6.92 [system]=0.19 [cpu]=99% [mem]=413472 [k_time]=1.11 [k_mem]=1.02 [est_time]=7921 [est_mem]=420191)
+([test]=souffle_compiled [nodes]=500 [elapsed]=11683 [comp_elapsed]=7139 [comp_mem]=426080 [user]=11.43 [system]=0.22 [cpu]=99% [mem]=426080 [k_time]=1.64 [k_mem]=1.03 [est_time]=19135 [est_mem]=439072)
+([test]=souffle_compiled [nodes]=1000 [elapsed]=43753 [comp_elapsed]=9143 [comp_mem]=451304 [user]=43.48 [system]=0.21 [cpu]=99% [mem]=451304 [k_time]=3.75 [k_mem]=1.06 [est_time]=163856 [est_mem]=478021)
+TC test of souffle_compiled .right finished because 163856 ms > 60000 ms.

@@ -1,0 +1,37 @@
+Running TC tests: tml xsb souffle souffle_compiled_prog souffle_compiled alt:
+Limit test round time: 60000 ms, max mem taken: 16696094 kBs and max number of nodes: 4000
+
+Starting TC test of tml
+([test]=tml [nodes]=125 [elapsed]=46 [user]=0.01 [system]=0.00 [cpu]=96% [mem]=5032 [k_time]=4.00 [k_mem]=4.00 [est_time]=184 [est_mem]=20128)
+([test]=tml [nodes]=250 [elapsed]=172 [user]=0.05 [system]=0.03 [cpu]=98% [mem]=5384 [k_time]=3.74 [k_mem]=1.07 [est_time]=643 [est_mem]=5761)
+([test]=tml [nodes]=500 [elapsed]=637 [user]=0.23 [system]=0.09 [cpu]=99% [mem]=6532 [k_time]=3.70 [k_mem]=1.21 [est_time]=2359 [est_mem]=7925)
+([test]=tml [nodes]=1000 [elapsed]=2543 [user]=0.88 [system]=0.41 [cpu]=99% [mem]=8160 [k_time]=3.99 [k_mem]=1.25 [est_time]=10152 [est_mem]=10194)
+([test]=tml [nodes]=2000 [elapsed]=10888 [user]=3.64 [system]=1.66 [cpu]=99% [mem]=11932 [k_time]=4.28 [k_mem]=1.46 [est_time]=46618 [est_mem]=17448)
+([test]=tml [nodes]=4000 [elapsed]=44732 [user]=13.48 [system]=7.44 [cpu]=99% [mem]=19840 [k_time]=4.11 [k_mem]=1.66 [est_time]=183776 [est_mem]=32989)
+TC test of tml  finished because 183776 ms > 60000 ms, 8000 nodes > 4000 nodes.
+
+Starting TC test of xsb
+([test]=xsb [nodes]=125 [elapsed]=298 [user]=0.28 [system]=0.01 [cpu]=101% [mem]=20348 [k_time]=4.00 [k_mem]=4.00 [est_time]=1192 [est_mem]=81392)
+([test]=xsb [nodes]=250 [elapsed]=1817 [user]=1.79 [system]=0.01 [cpu]=100% [mem]=37860 [k_time]=6.10 [k_mem]=1.86 [est_time]=11079 [est_mem]=70443)
+([test]=xsb [nodes]=500 [elapsed]=13909 [user]=13.86 [system]=0.03 [cpu]=99% [mem]=119004 [k_time]=7.65 [k_mem]=3.14 [est_time]=106472 [est_mem]=374061)
+TC test of xsb  finished because 106472 ms > 60000 ms.
+
+Starting TC test of souffle
+([test]=souffle [nodes]=125 [elapsed]=722 [user]=0.70 [system]=0.00 [cpu]=100% [mem]=8124 [k_time]=4.00 [k_mem]=4.00 [est_time]=2888 [est_mem]=32496)
+([test]=souffle [nodes]=250 [elapsed]=5784 [user]=5.72 [system]=0.00 [cpu]=99% [mem]=9832 [k_time]=8.01 [k_mem]=1.21 [est_time]=46336 [est_mem]=11899)
+([test]=souffle [nodes]=500 [elapsed]=43544 [user]=43.29 [system]=0.00 [cpu]=99% [mem]=16668 [k_time]=7.53 [k_mem]=1.70 [est_time]=327815 [est_mem]=28257)
+TC test of souffle  finished because 327815 ms > 60000 ms.
+
+Starting TC test of souffle_compiled_prog
+([test]=souffle_compiled_prog [nodes]=125 [elapsed]=6395 [comp_elapsed]=6296 [comp_mem]=405404 [user]=6.17 [system]=0.20 [cpu]=99% [mem]=405404 [k_time]=4.00 [k_mem]=4.00 [est_time]=25580 [est_mem]=1621616)
+([test]=souffle_compiled_prog [nodes]=250 [elapsed]=6934 [comp_elapsed]=6305 [comp_mem]=405372 [user]=6.67 [system]=0.23 [cpu]=99% [mem]=405372 [k_time]=1.08 [k_mem]=1.00 [est_time]=7518 [est_mem]=405340)
+([test]=souffle_compiled_prog [nodes]=500 [elapsed]=10860 [comp_elapsed]=6286 [comp_mem]=405364 [user]=10.63 [system]=0.20 [cpu]=99% [mem]=405364 [k_time]=1.57 [k_mem]=1.00 [est_time]=17009 [est_mem]=405356)
+([test]=souffle_compiled_prog [nodes]=1000 [elapsed]=41623 [comp_elapsed]=6317 [comp_mem]=405256 [user]=41.37 [system]=0.20 [cpu]=99% [mem]=405256 [k_time]=3.83 [k_mem]=1.00 [est_time]=159528 [est_mem]=405148)
+TC test of souffle_compiled_prog  finished because 159528 ms > 60000 ms.
+
+Starting TC test of souffle_compiled
+([test]=souffle_compiled [nodes]=125 [elapsed]=6402 [comp_elapsed]=6303 [comp_mem]=406888 [user]=6.19 [system]=0.18 [cpu]=99% [mem]=406888 [k_time]=4.00 [k_mem]=4.00 [est_time]=25608 [est_mem]=1627552)
+([test]=souffle_compiled [nodes]=250 [elapsed]=7268 [comp_elapsed]=6627 [comp_mem]=413524 [user]=7.07 [system]=0.17 [cpu]=99% [mem]=413524 [k_time]=1.14 [k_mem]=1.02 [est_time]=8251 [est_mem]=420268)
+([test]=souffle_compiled [nodes]=500 [elapsed]=11726 [comp_elapsed]=7151 [comp_mem]=426040 [user]=11.52 [system]=0.18 [cpu]=99% [mem]=426040 [k_time]=1.61 [k_mem]=1.03 [est_time]=18918 [est_mem]=438935)
+([test]=souffle_compiled [nodes]=1000 [elapsed]=43662 [comp_elapsed]=9106 [comp_mem]=451484 [user]=43.38 [system]=0.22 [cpu]=99% [mem]=451484 [k_time]=3.72 [k_mem]=1.06 [est_time]=162576 [est_mem]=478448)
+TC test of souffle_compiled  finished because 162576 ms > 60000 ms.
